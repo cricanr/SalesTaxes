@@ -25,4 +25,14 @@ class PriceCalculatorTest extends WordSpec with Matchers {
       }
     }
   }
+
+  "The Price calculator" when {
+    "given multiple input lines" should {
+      "return 65.15" in {
+        val priceCalculator = new PriceCalculator()
+        priceCalculator.getTotalPrice(Seq("1 imported box of chocolates at 10.00",
+          "1 imported bottle of perfume at 47.50")) shouldEqual 65.15
+      }
+    }
+  }
 }
