@@ -52,32 +52,3 @@ Output 3:
 1 imported box of chocolates: 11.85
 Sales Taxes: 6.70
 Total: 74.68
-
-Run the program
-
-Input Files:
-
-input1.txt
-input2.txt
-input3.txt
-TDD done with rspec - (Unit and Integration tests)
-Spec files:
-
-lineitem_spec.rb
-output_spec.rb
-receipt.rb
-To run individual test: $ rspec spec/<filename>.rb
-
-To run all tests: $ rspec
-
-Design
-Problem is broken down into 3 classes
-
-Lineitem
-Receipt
-Output
-LineItem breaks down the input and organize each line item by quantity, price and product. The class also takes into consideration goods that are exempt from sales tax(10%), and all imported goods, which are taxed 5%.
-
-Receipt takes an input, calculates the appropriate tax for each line item, and prints it.
-
-Output runs the program
