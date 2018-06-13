@@ -25,4 +25,13 @@ class TaxCalculatorTest extends WordSpec with Matchers {
       }
     }
   }
+
+  "The Tax calculator getSalesTaxes method" when {
+    "given multiple input lines'" should {
+      "return total sales taxes for those products" in {
+        val taxCalculator = new TaxCalculator()
+        taxCalculator.getSalesTaxes(Seq("1 book at 12.49", "1 music CD at 14.99", "1 chocolate bar at 0.85")) shouldEqual 1.50
+      }
+    }
+  }
 }
